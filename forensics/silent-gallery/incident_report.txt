@@ -1,0 +1,352 @@
+Incident Report: Gallery Workstation 
+Analyst: M. Chandra	
+Date: 2026-05-14 
+	
+The recovered image looked ordinary during triage.	
+No browser history entry explained how it arrived. 
+The workstation speakers were muted when collected. 
+A student account opened the file shortly before lunch.	
+Timeline entries around the image viewer were unusually quiet. 
+The print queue contained no related document names.	
+The user recently installed an audio editor. 
+The last accessed path was inside a shared class folder. 
+The filename was changed twice within the same minute.	
+Metadata did not preserve a useful camera model. 
+The thumbnail cache only showed a classroom wall.	
+No cloud sync conflict was recorded.	
+The report body intentionally preserves original spacing. 
+Archive comments were absent. 
+No malware beacon was observed during offline review.	
+Final disposition remains pending.	
+A second analyst confirmed the timestamps. 
+A second analyst confirmed the timestamps. 
+A second analyst confirmed the timestamps. 
+Hash values were logged before copies were made.	
+Final disposition remains pending. 
+The casing note mentions silence more than once.	
+The casing note mentions silence more than once. 
+Archive comments were absent.	
+The casing note mentions silence more than once.	
+A second analyst confirmed the timestamps. 
+The artifact should be handled as read-only evidence. 
+The artifact should be handled as read-only evidence.	
+Hash values were logged before copies were made. 
+No malware beacon was observed during offline review.	
+Final disposition remains pending.	
+The casing note mentions silence more than once. 
+No malware beacon was observed during offline review.	
+A second analyst confirmed the timestamps. 
+Final disposition remains pending. 
+Archive comments were absent. 
+Final disposition remains pending. 
+A second analyst confirmed the timestamps.	
+The casing note mentions silence more than once. 
+Final disposition remains pending. 
+The casing note mentions silence more than once.	
+The casing note mentions silence more than once.	
+No malware beacon was observed during offline review. 
+Hash values were logged before copies were made. 
+Archive comments were absent. 
+The artifact should be handled as read-only evidence.	
+Hash values were logged before copies were made.	
+Final disposition remains pending. 
+Final disposition remains pending.	
+Hash values were logged before copies were made. 
+Hash values were logged before copies were made. 
+The casing note mentions silence more than once. 
+Archive comments were absent. 
+Archive comments were absent. 
+Final disposition remains pending.	
+The casing note mentions silence more than once. 
+Hash values were logged before copies were made.	
+A second analyst confirmed the timestamps. 
+Archive comments were absent.	
+The artifact should be handled as read-only evidence.	
+The casing note mentions silence more than once. 
+The casing note mentions silence more than once.	
+The artifact should be handled as read-only evidence. 
+A second analyst confirmed the timestamps. 
+No malware beacon was observed during offline review.	
+The artifact should be handled as read-only evidence.	
+Archive comments were absent.	
+Final disposition remains pending.	
+No malware beacon was observed during offline review. 
+The casing note mentions silence more than once. 
+Archive comments were absent.	
+Hash values were logged before copies were made.	
+The casing note mentions silence more than once. 
+Final disposition remains pending. 
+No malware beacon was observed during offline review. 
+Final disposition remains pending.	
+Archive comments were absent. 
+A second analyst confirmed the timestamps.	
+The artifact should be handled as read-only evidence.	
+No malware beacon was observed during offline review.	
+A second analyst confirmed the timestamps. 
+Archive comments were absent.	
+The artifact should be handled as read-only evidence.	
+Final disposition remains pending.	
+The casing note mentions silence more than once. 
+A second analyst confirmed the timestamps.	
+The artifact should be handled as read-only evidence.	
+No malware beacon was observed during offline review.	
+A second analyst confirmed the timestamps. 
+Archive comments were absent. 
+Final disposition remains pending. 
+The artifact should be handled as read-only evidence. 
+Final disposition remains pending. 
+No malware beacon was observed during offline review.	
+Hash values were logged before copies were made.	
+The artifact should be handled as read-only evidence. 
+Archive comments were absent. 
+Hash values were logged before copies were made.	
+Hash values were logged before copies were made.	
+Archive comments were absent. 
+A second analyst confirmed the timestamps. 
+The artifact should be handled as read-only evidence.	
+A second analyst confirmed the timestamps. 
+The artifact should be handled as read-only evidence. 
+Final disposition remains pending. 
+A second analyst confirmed the timestamps. 
+Hash values were logged before copies were made.	
+The casing note mentions silence more than once.	
+Archive comments were absent. 
+Final disposition remains pending.	
+Archive comments were absent.	
+Archive comments were absent. 
+Archive comments were absent.	
+Hash values were logged before copies were made. 
+A second analyst confirmed the timestamps. 
+The casing note mentions silence more than once.	
+A second analyst confirmed the timestamps. 
+A second analyst confirmed the timestamps. 
+A second analyst confirmed the timestamps.	
+Hash values were logged before copies were made.	
+A second analyst confirmed the timestamps. 
+The artifact should be handled as read-only evidence. 
+Archive comments were absent.	
+Archive comments were absent.	
+Final disposition remains pending. 
+A second analyst confirmed the timestamps.	
+A second analyst confirmed the timestamps. 
+The artifact should be handled as read-only evidence. 
+The artifact should be handled as read-only evidence. 
+Final disposition remains pending.	
+A second analyst confirmed the timestamps. 
+The artifact should be handled as read-only evidence.	
+No malware beacon was observed during offline review. 
+The casing note mentions silence more than once. 
+A second analyst confirmed the timestamps.	
+No malware beacon was observed during offline review.	
+The casing note mentions silence more than once. 
+The artifact should be handled as read-only evidence.	
+The casing note mentions silence more than once.	
+Hash values were logged before copies were made.	
+A second analyst confirmed the timestamps. 
+A second analyst confirmed the timestamps. 
+The artifact should be handled as read-only evidence.	
+The casing note mentions silence more than once.	
+The casing note mentions silence more than once. 
+No malware beacon was observed during offline review.	
+The artifact should be handled as read-only evidence.	
+Archive comments were absent.	
+Archive comments were absent. 
+Archive comments were absent.	
+The casing note mentions silence more than once.	
+Hash values were logged before copies were made. 
+No malware beacon was observed during offline review. 
+No malware beacon was observed during offline review.	
+The casing note mentions silence more than once.	
+Archive comments were absent. 
+Final disposition remains pending. 
+No malware beacon was observed during offline review. 
+Hash values were logged before copies were made.	
+Hash values were logged before copies were made.	
+A second analyst confirmed the timestamps. 
+Hash values were logged before copies were made. 
+The casing note mentions silence more than once.	
+The artifact should be handled as read-only evidence.	
+Hash values were logged before copies were made. 
+The artifact should be handled as read-only evidence.	
+Final disposition remains pending. 
+Archive comments were absent.	
+A second analyst confirmed the timestamps.	
+Final disposition remains pending. 
+A second analyst confirmed the timestamps. 
+Final disposition remains pending. 
+A second analyst confirmed the timestamps. 
+The artifact should be handled as read-only evidence.	
+Hash values were logged before copies were made.	
+No malware beacon was observed during offline review. 
+The artifact should be handled as read-only evidence.	
+The casing note mentions silence more than once. 
+Final disposition remains pending. 
+A second analyst confirmed the timestamps. 
+Final disposition remains pending. 
+A second analyst confirmed the timestamps.	
+The casing note mentions silence more than once.	
+No malware beacon was observed during offline review. 
+No malware beacon was observed during offline review.	
+The artifact should be handled as read-only evidence. 
+Archive comments were absent.	
+The artifact should be handled as read-only evidence.	
+Archive comments were absent. 
+The casing note mentions silence more than once. 
+Hash values were logged before copies were made.	
+Hash values were logged before copies were made. 
+Archive comments were absent.	
+A second analyst confirmed the timestamps. 
+Archive comments were absent.	
+Hash values were logged before copies were made.	
+Final disposition remains pending. 
+A second analyst confirmed the timestamps. 
+The artifact should be handled as read-only evidence.	
+The casing note mentions silence more than once.	
+No malware beacon was observed during offline review.	
+Archive comments were absent. 
+No malware beacon was observed during offline review. 
+Final disposition remains pending. 
+No malware beacon was observed during offline review. 
+Hash values were logged before copies were made.	
+Archive comments were absent.	
+No malware beacon was observed during offline review. 
+Archive comments were absent. 
+The casing note mentions silence more than once.	
+No malware beacon was observed during offline review.	
+The artifact should be handled as read-only evidence. 
+No malware beacon was observed during offline review. 
+Final disposition remains pending.	
+Hash values were logged before copies were made.	
+Hash values were logged before copies were made. 
+No malware beacon was observed during offline review. 
+A second analyst confirmed the timestamps. 
+Final disposition remains pending. 
+Hash values were logged before copies were made.	
+A second analyst confirmed the timestamps. 
+Archive comments were absent.	
+The artifact should be handled as read-only evidence.	
+The casing note mentions silence more than once. 
+Archive comments were absent.	
+Archive comments were absent. 
+Archive comments were absent. 
+No malware beacon was observed during offline review.	
+The artifact should be handled as read-only evidence. 
+Final disposition remains pending. 
+A second analyst confirmed the timestamps.	
+Archive comments were absent.	
+Hash values were logged before copies were made. 
+Archive comments were absent.	
+Hash values were logged before copies were made.	
+Archive comments were absent. 
+A second analyst confirmed the timestamps. 
+A second analyst confirmed the timestamps.	
+Hash values were logged before copies were made. 
+Final disposition remains pending.	
+Hash values were logged before copies were made.	
+A second analyst confirmed the timestamps. 
+No malware beacon was observed during offline review. 
+A second analyst confirmed the timestamps.	
+No malware beacon was observed during offline review. 
+Archive comments were absent.	
+The artifact should be handled as read-only evidence. 
+Archive comments were absent.	
+The artifact should be handled as read-only evidence. 
+Archive comments were absent.	
+The artifact should be handled as read-only evidence.	
+Hash values were logged before copies were made. 
+Archive comments were absent. 
+The casing note mentions silence more than once. 
+Archive comments were absent.	
+Final disposition remains pending. 
+Hash values were logged before copies were made.	
+No malware beacon was observed during offline review. 
+No malware beacon was observed during offline review.	
+No malware beacon was observed during offline review.	
+Final disposition remains pending. 
+Archive comments were absent.	
+Hash values were logged before copies were made. 
+Archive comments were absent.	
+Archive comments were absent.	
+No malware beacon was observed during offline review. 
+No malware beacon was observed during offline review. 
+The artifact should be handled as read-only evidence.	
+A second analyst confirmed the timestamps. 
+A second analyst confirmed the timestamps. 
+Hash values were logged before copies were made.	
+The artifact should be handled as read-only evidence.	
+Final disposition remains pending.	
+No malware beacon was observed during offline review. 
+A second analyst confirmed the timestamps. 
+Final disposition remains pending.	
+A second analyst confirmed the timestamps. 
+Hash values were logged before copies were made.	
+The artifact should be handled as read-only evidence. 
+A second analyst confirmed the timestamps.	
+The artifact should be handled as read-only evidence. 
+Archive comments were absent.	
+The casing note mentions silence more than once. 
+The casing note mentions silence more than once. 
+The artifact should be handled as read-only evidence. 
+The artifact should be handled as read-only evidence.	
+The artifact should be handled as read-only evidence. 
+No malware beacon was observed during offline review.	
+The casing note mentions silence more than once.	
+A second analyst confirmed the timestamps. 
+Archive comments were absent. 
+Hash values were logged before copies were made. 
+Final disposition remains pending. 
+The artifact should be handled as read-only evidence. 
+Final disposition remains pending.	
+Final disposition remains pending.	
+Final disposition remains pending. 
+The artifact should be handled as read-only evidence. 
+No malware beacon was observed during offline review. 
+Archive comments were absent. 
+Final disposition remains pending. 
+Final disposition remains pending. 
+Hash values were logged before copies were made.	
+Final disposition remains pending. 
+The casing note mentions silence more than once.	
+The artifact should be handled as read-only evidence. 
+Final disposition remains pending.	
+No malware beacon was observed during offline review.	
+Final disposition remains pending. 
+The artifact should be handled as read-only evidence.	
+No malware beacon was observed during offline review. 
+The artifact should be handled as read-only evidence. 
+The casing note mentions silence more than once.	
+Archive comments were absent. 
+The artifact should be handled as read-only evidence.	
+Hash values were logged before copies were made.	
+Archive comments were absent. 
+A second analyst confirmed the timestamps.	
+A second analyst confirmed the timestamps.	
+A second analyst confirmed the timestamps.	
+A second analyst confirmed the timestamps.	
+Archive comments were absent. 
+Archive comments were absent. 
+Final disposition remains pending.	
+No malware beacon was observed during offline review. 
+No malware beacon was observed during offline review.	
+The artifact should be handled as read-only evidence. 
+Archive comments were absent.	
+Final disposition remains pending. 
+A second analyst confirmed the timestamps. 
+The artifact should be handled as read-only evidence.	
+Final disposition remains pending. 
+The casing note mentions silence more than once. 
+Final disposition remains pending.	
+Final disposition remains pending. 
+The artifact should be handled as read-only evidence.	
+The casing note mentions silence more than once. 
+The casing note mentions silence more than once. 
+Final disposition remains pending. 
+A second analyst confirmed the timestamps.	
+A second analyst confirmed the timestamps. 
+A second analyst confirmed the timestamps. 
+The artifact should be handled as read-only evidence.	
+A second analyst confirmed the timestamps.	
+Hash values were logged before copies were made.	
+Archive comments were absent.	
+Final disposition remains pending. 
+Hash values were logged before copies were made.	

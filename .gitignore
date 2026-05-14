@@ -1,0 +1,11 @@
+.DS_Store
+Thumbs.db
+
+# Local/private challenge authoring materials.
+/silent-gallery/
+
+# Common editor and OS noise.
+.idea/
+.vscode/
+*.swp
+*.swo
