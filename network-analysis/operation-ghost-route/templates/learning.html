@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}Field Guide · GHOST ROUTE{% endblock %}
+{% block content %}
+<section class="page-head narrow">
+  <div class="eyebrow">ANALYST FIELD GUIDE</div>
+  <h1>Techniques, not answers.</h1>
+  <p>Use this guide when you understand the evidence but need help choosing the next operation.</p>
+</section>
+<section class="guide">
+  <article><span>01</span><div><h2>Correlate before decoding</h2><p>Build a UTC timeline using usernames, hostnames, source IPs, process ancestry, URLs, and hashes. Start from rare events and pivot into adjacent sources.</p></div></article>
+  <article><span>02</span><div><h2>Recognize DNS tunnelling</h2><p>Look for many high-entropy labels beneath one uncommon parent domain, a consistent source, numeric sequence markers, and a short time window.</p></div></article>
+  <article><span>03</span><div><h2>Reassemble in sequence</h2><p>Sort chunk counters numerically, remove the counter and separator, then concatenate the encoded data before decoding it.</p></div></article>
+  <article><span>04</span><div><h2>Restore Base32 padding</h2><p>DNS labels often omit equals signs. Add padding until the complete encoded string has a length divisible by eight.</p></div></article>
+  <article><span>05</span><div><h2>Follow the endpoint command</h2><p>Process arguments can document an attacker's transformation pipeline. Distinguish hexadecimal characters from the bytes they represent.</p></div></article>
+  <article><span>06</span><div><h2>Inspect before assuming text</h2><p>After reversing encryption or obfuscation, check for compression signatures. Common zlib streams begin with 78 01, 78 9c, or 78 da.</p></div></article>
+</section>
+{% endblock %}

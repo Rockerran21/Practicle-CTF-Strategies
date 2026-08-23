@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block title %}Finding {{ stage_number }} · GHOST ROUTE{% endblock %}
+{% block content %}
+<section class="workspace">
+  <aside class="case-sidebar">
+    <div class="eyebrow">ACTIVE INVESTIGATION</div>
+    <h2>Finding {{ stage_number }} of {{ total }}</h2>
+    <div class="step-list">
+      {% for number in range(1, total + 1) %}
+      <div class="step {% if number < stage_number %}done{% elif number == stage_number %}active{% endif %}">
+        <span>{{ "%02d"|format(number) }}</span>
+        <i></i>
+      </div>
+      {% endfor %}
+    </div>
+    <a class="text-link" href="{{ url_for('evidence') }}">Open evidence locker →</a>
+  </aside>
+  <article class="finding-card">
+    <div class="eyebrow">REQUIRED FINDING {{ "%02d"|format(stage_number) }}</div>
+    <h1>{{ stage.title }}</h1>
+    <p>{{ stage.prompt }}</p>
+    <form method="post" autocomplete="off">
+      <label for="answer">Analyst conclusion</label>
+      <input id="answer" name="answer" placeholder="{{ stage.placeholder }}" required autofocus>
+      {% if feedback %}<div class="feedback">{{ feedback }}</div>{% endif %}
+      <button class="button primary" type="submit">Validate finding</button>
+    </form>
+    <details>
+      <summary>Request a field hint</summary>
+      <p>{{ stage.hint }}</p>
+    </details>
+  </article>
+</section>
+{% endblock %}

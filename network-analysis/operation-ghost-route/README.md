@@ -17,6 +17,21 @@ recover data carried through DNS queries.
 This challenge is defensive and self-contained. It does not require attacking a
 live service or contacting any domain found in the evidence.
 
+## Hosted portal
+
+The Flask application in this directory provides a browser-based case portal,
+downloadable evidence locker, field guide, progressive answer validation, and
+session-based progress. Run it locally with:
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+python app.py
+```
+
+The root `render.yaml` deploys this portal as a Render web service.
+
 ## Student package
 
 Give students only these items:

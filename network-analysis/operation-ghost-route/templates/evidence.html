@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %}Evidence Locker · GHOST ROUTE{% endblock %}
+{% block content %}
+<section class="page-head">
+  <div class="eyebrow">CHAIN OF CUSTODY · SYNTHETIC EXPORTS</div>
+  <h1>Evidence locker</h1>
+  <p>Download every source. Do not assume the rows are chronological or that every alert belongs to this incident.</p>
+</section>
+<section class="evidence-grid">
+  {% for filename, description in files.items() %}
+  <article class="evidence-card">
+    <span class="file-type">{{ filename.rsplit('.', 1)[-1]|upper }}</span>
+    <h2>{{ filename }}</h2>
+    <p>{{ description }}</p>
+    <a class="button secondary" href="{{ url_for('download_evidence', filename=filename) }}">Download file</a>
+  </article>
+  {% endfor %}
+</section>
+{% endblock %}

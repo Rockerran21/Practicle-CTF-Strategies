@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="hero">
+  <div class="eyebrow">CASE GR-0817 · SEVERITY UNKNOWN</div>
+  <h1>Something left the<br><em>finance network.</em></h1>
+  <p class="lede">Four noisy telemetry exports. One compromised workstation. A DNS trail that was designed to disappear into routine traffic.</p>
+  <div class="actions">
+    <a class="button primary" href="{{ url_for('investigate') }}">{% if progress %}Resume investigation{% else %}Open case file{% endif %}</a>
+    <a class="button secondary" href="{{ url_for('evidence') }}">Download evidence</a>
+  </div>
+</section>
+<section class="case-grid">
+  <article class="panel status-panel">
+    <span class="panel-label">Investigation status</span>
+    <strong>{{ progress }}/{{ total }} findings confirmed</strong>
+    <div class="progress"><span style="width: {{ (progress / total * 100)|int }}%"></span></div>
+  </article>
+  <article class="panel">
+    <span class="panel-label">Evidence sources</span>
+    <strong>Identity · Proxy · Endpoint · DNS</strong>
+    <p>Timestamps are UTC and the exports are deliberately unsorted.</p>
+  </article>
+  <article class="panel warning">
+    <span class="panel-label">Analyst warning</span>
+    <strong>The loudest alert may be irrelevant.</strong>
+    <p>Correlate durable identifiers before deciding what happened.</p>
+  </article>
+</section>
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}Case Closed · GHOST ROUTE{% endblock %}
+{% block content %}
+<section class="complete">
+  <div class="seal">✓</div>
+  <div class="eyebrow">CASE GR-0817 · CLOSED</div>
+  <h1>Exfiltration confirmed.</h1>
+  <p>You correlated four evidence sources, rejected unrelated noise, reconstructed the DNS stream, and recovered the payload.</p>
+  <code>flag{correlation_beats_single_alerts}</code>
+  <div class="actions">
+    <a class="button primary" href="{{ url_for('evidence') }}">Review evidence</a>
+    <form method="post" action="{{ url_for('reset') }}"><button class="button secondary" type="submit">Reset case</button></form>
+  </div>
+</section>
+{% endblock %}
