@@ -180,3 +180,6 @@ These challenges are for educational use in a controlled classroom environment. 
 ## License
 
 This repository is available under the [MIT License](LICENSE).
+
+Contributions are welcome. See [CONTRIBUTING.md](CONTRIBUTING.md) for the
+challenge format and safety requirements.
