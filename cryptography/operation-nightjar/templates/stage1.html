@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% block body %}
+  <h1>INTERCEPT 001</h1>
+  <p class="dim">OBJECTIVE: recover the courier's CODENAME.</p>
+
+  <div class="panel">
+    <p>This transmission was captured off an open channel. It looks armored, and
+    under that armor the letters seem shifted by a fixed amount.</p>
+    <span class="blob">{{ art.stage1_blob }}</span>
+  </div>
+
+  {% if hints_available %}
+  <details>
+    <summary>HINT 1</summary>
+    <p>Those characters are printable and end in padding. This is a common
+    "armor" encoding used to move binary over text channels.</p>
+  </details>
+  <details>
+    <summary>HINT 2</summary>
+    <p>After you un-armor it you get letters that are still scrambled by a fixed
+    rotation. The most famous fixed rotation moves every letter halfway round the
+    alphabet.</p>
+  </details>
+  <details>
+    <summary>HINT 3 (recipe)</summary>
+    <p>In CyberChef: <code>From Base64</code> then <code>ROT13</code>. The message
+    names the codename in plain English.</p>
+  </details>
+  {% else %}{% include "_hintgate.html" %}{% endif %}
+
+  {% if just_solved or already %}
+    <div class="panel">
+      <p class="ok">CODENAME CONFIRMED. Intercept 001 decrypted.</p>
+      <p class="amber">REWARD // recovered cipher key for the next intercept:</p>
+      <span class="blob">VIGENERE KEY = NIGHTJAR</span>
+      <p class="dim">Intercept 002 is a Vigenere cipher. Use this key to read it.</p>
+    </div>
+    <div class="btnrow">
+      <a href="{{ url_for('stage', stage=2) }}">PROCEED TO INTERCEPT 002 &raquo;</a>
+    </div>
+  {% else %}
+    {% if feedback %}<p class="err">{{ feedback }}</p>{% endif %}
+    <form method="post">
+      <label class="dim">Enter the recovered CODENAME:</label>
+      <input type="text" name="answer" autocomplete="off" autofocus placeholder="one word">
+      <button type="submit">SUBMIT</button>
+    </form>
+  {% endif %}
+{% endblock %}

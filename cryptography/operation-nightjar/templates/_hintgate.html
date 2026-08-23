@@ -1,0 +1,19 @@
+<div class="panel">
+  <p class="amber">HINTS LOCKED</p>
+  <p class="dim">Hints for this intercept unlock after {{ hint_delay_min }} minutes on
+  the stage. Work the cipher first.</p>
+  <p>Hints unlock in <span id="cd" class="amber">--:--</span></p>
+</div>
+<script>
+  (function () {
+    var r = {{ hint_remaining }};
+    var el = document.getElementById("cd");
+    function fmt(s){var m=Math.floor(s/60), x=s%60; return m+":"+(x<10?"0":"")+x;}
+    el.textContent = fmt(r);
+    var t = setInterval(function () {
+      r -= 1;
+      if (r <= 0) { clearInterval(t); location.reload(); }
+      else { el.textContent = fmt(r); }
+    }, 1000);
+  })();
+</script>

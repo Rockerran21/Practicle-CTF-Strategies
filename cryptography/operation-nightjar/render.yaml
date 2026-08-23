@@ -1,0 +1,17 @@
+# Render Blueprint. On render.com: New > Blueprint, connect this repo, and
+# Render reads this file to create the service automatically.
+services:
+  - type: web
+    name: nightjar-ctf
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app --bind 0.0.0.0:$PORT --workers 2
+    envVars:
+      # Stable session secret so player progress survives restarts.
+      # generateValue makes Render create one strong value once and keep it.
+      - key: NIGHTJAR_SECRET
+        generateValue: true
+      # Minutes-in-seconds before per-stage hints unlock. 600 = 10 minutes.
+      - key: HINT_DELAY_SECONDS
+        value: "600"

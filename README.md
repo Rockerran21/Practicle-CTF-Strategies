@@ -137,6 +137,11 @@ Any rules, warnings, or special instructions.
 | Domain | Challenge | Difficulty | Main Skills |
 | --- | --- | --- | --- |
 | Forensics | Silent Gallery | Intermediate | File carving, spectrogram analysis, whitespace steganography, basic reverse engineering |
+| Cryptography | [Operation NIGHTJAR](cryptography/operation-nightjar/) | Intermediate | Base64, ROT13, Vigenere cipher, single-byte XOR, SHA-256, AES-256-CBC |
+
+Operation NIGHTJAR is a self-hosted Flask challenge intended for instructors and
+workshop organizers. Its public source includes the organizer solution, so hosts
+should customize the answer set before assigning it to students.
 
 ## Flag Validation
 
@@ -171,3 +176,7 @@ A good private solution record should include:
 ## Disclaimer
 
 These challenges are for educational use in a controlled classroom environment. Students should only test systems, files, and services that are explicitly provided for the course or that they have permission to analyze.
+
+## License
+
+This repository is available under the [MIT License](LICENSE).

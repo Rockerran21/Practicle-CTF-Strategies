@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block body %}
+  <h1>INTERCEPT 002</h1>
+  <p class="dim">OBJECTIVE: recover the DROP LOCATION (one word).</p>
+
+  <div class="panel">
+    <p>A polyalphabetic cipher. You already recovered its key from Intercept 001:
+    <span class="amber">NIGHTJAR</span>. Spaces and punctuation were left in place.</p>
+    <span class="blob">{{ art.stage2_blob }}</span>
+  </div>
+
+  {% if hints_available %}
+  <details>
+    <summary>HINT 1</summary>
+    <p>A repeating-keyword cipher where each letter is shifted by the matching
+    letter of the key. Named after a 16th-century Frenchman.</p>
+  </details>
+  <details>
+    <summary>HINT 2 (recipe)</summary>
+    <p>CyberChef <code>Vigenère Decode</code> with key <code>NIGHTJAR</code>, or
+    dcode.fr "Vigenere Cipher". Read off the one-word location.</p>
+  </details>
+  {% else %}{% include "_hintgate.html" %}{% endif %}
+
+  {% if just_solved or already %}
+    <div class="panel">
+      <p class="ok">LOCATION CONFIRMED. Intercept 002 decrypted.</p>
+      <p class="amber">REWARD // next intercept was captured as raw bytes:</p>
+      <p class="dim">Intercept 003 is a hex string that has been XOR-encrypted
+      with a single unknown byte. Brute force all 256 possibilities and read the
+      one that turns into English.</p>
+    </div>
+    <div class="btnrow">
+      <a href="{{ url_for('stage', stage=3) }}">PROCEED TO INTERCEPT 003 &raquo;</a>
+    </div>
+  {% else %}
+    {% if feedback %}<p class="err">{{ feedback }}</p>{% endif %}
+    <form method="post">
+      <label class="dim">Enter the recovered LOCATION:</label>
+      <input type="text" name="answer" autocomplete="off" autofocus placeholder="one word">
+      <button type="submit">SUBMIT</button>
+    </form>
+  {% endif %}
+{% endblock %}

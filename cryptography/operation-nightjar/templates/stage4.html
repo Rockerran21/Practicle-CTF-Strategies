@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+{% block body %}
+  <h1>FINAL DECRYPTION</h1>
+  <p class="dim">OBJECTIVE: build the key from your evidence and reveal the plan.</p>
+
+  <div class="panel">
+    <p>You recovered three words: the <b>codename</b>, the <b>location</b>, and
+    the <b>countersign</b>. The cell derived their master key from exactly these.</p>
+    <ol>
+      <li>Write the three words in <b>UPPERCASE</b>, in intercept order (001, 002,
+      003), joined by single hyphens, e.g. <code>WORD1-WORD2-WORD3</code>.</li>
+      <li>Take the <b>SHA-256</b> hash of that string. The 64 hex characters are
+      your <b>AES-256 key</b>.</li>
+      <li>Decrypt the ciphertext below: <b>AES-256-CBC</b>, key = your SHA-256
+      hex, IV = the value given, input = Base64.</li>
+    </ol>
+
+    <p class="amber">CIPHERTEXT (Base64):</p>
+    <span class="blob">{{ art.final_blob }}</span>
+    <p class="amber">IV (hex):</p>
+    <span class="blob">{{ art.iv_hex }}</span>
+    <p class="dim">The decrypted plan contains the final flag, of the form
+    <code>NIGHTJAR{...}</code>.</p>
+  </div>
+
+  {% if hints_available %}
+  <details>
+    <summary>HINT 1</summary>
+    <p>Get the SHA-256 of your joined string first (CyberChef <code>SHA2 256</code>,
+    or <code>printf '%s' 'WORD1-WORD2-WORD3' | shasum -a 256</code>). Feed that hex
+    as the key.</p>
+  </details>
+  <details>
+    <summary>HINT 2 (CyberChef recipe)</summary>
+    <p><code>From Base64</code> then <code>AES Decrypt</code> with Key = your
+    SHA-256 hex (type: HEX), IV = the hex above (type: HEX), Mode = CBC,
+    Input = Raw.</p>
+  </details>
+  <details>
+    <summary>HINT 3 (Python one-shot)</summary>
+    <span class="blob">import hashlib, base64
+from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes
+key = hashlib.sha256(b"WORD1-WORD2-WORD3").digest()
+ct  = base64.b64decode("{{ art.final_blob }}")
+iv  = bytes.fromhex("{{ art.iv_hex }}")
+d   = Cipher(algorithms.AES(key), modes.CBC(iv)).decryptor()
+pt  = d.update(ct) + d.finalize()
+print(pt[:-pt[-1]].decode())</span>
+  </details>
+  {% else %}{% include "_hintgate.html" %}{% endif %}
+
+  {% if just_solved or already %}
+    <div class="panel">
+      <p class="ok">FLAG ACCEPTED. Operation NIGHTJAR is blown wide open.</p>
+    </div>
+    <div class="btnrow">
+      <a href="{{ url_for('win') }}">VIEW DEBRIEF &raquo;</a>
+    </div>
+  {% else %}
+    {% if feedback %}<p class="err">{{ feedback }}</p>{% endif %}
+    <form method="post">
+      <label class="dim">Enter the FLAG from the decrypted plan:</label>
+      <input type="text" name="answer" autocomplete="off" autofocus placeholder="NIGHTJAR{...}">
+      <button type="submit">SUBMIT FLAG</button>
+    </form>
+  {% endif %}
+{% endblock %}

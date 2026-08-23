@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block body %}
+  <h1>INTERCEPT 003</h1>
+  <p class="dim">OBJECTIVE: recover the COUNTERSIGN (one word).</p>
+
+  <div class="panel">
+    <p>Captured as raw bytes, shown here as hex. Every byte was XOR'd with the
+    same single unknown byte (0x00 to 0xFF). Try them all.</p>
+    <span class="blob">{{ art.stage3_blob }}</span>
+  </div>
+
+  {% if hints_available %}
+  <details>
+    <summary>HINT 1</summary>
+    <p>Only 256 possible keys. Loop over each, XOR the whole buffer, and print the
+    result. Exactly one comes out as clean readable text.</p>
+  </details>
+  <details>
+    <summary>HINT 2 (recipe)</summary>
+    <p>CyberChef <code>From Hex</code> then <code>XOR Brute Force</code> (key
+    length 1). Or a few lines of Python:</p>
+    <span class="blob">import binascii
+raw = binascii.unhexlify("{{ art.stage3_blob }}")
+for k in range(256):
+    out = bytes(b ^ k for b in raw)
+    if out.isascii() and b"INTERCEPT" in out:
+        print(k, out.decode())</span>
+  </details>
+  {% else %}{% include "_hintgate.html" %}{% endif %}
+
+  {% if just_solved or already %}
+    <div class="panel">
+      <p class="ok">COUNTERSIGN CONFIRMED. All three intercepts decrypted.</p>
+      <p class="amber">You now hold all the evidence you need.</p>
+    </div>
+    <div class="btnrow">
+      <a href="{{ url_for('stage', stage=4) }}">PROCEED TO FINAL DECRYPTION &raquo;</a>
+    </div>
+  {% else %}
+    {% if feedback %}<p class="err">{{ feedback }}</p>{% endif %}
+    <form method="post">
+      <label class="dim">Enter the recovered COUNTERSIGN:</label>
+      <input type="text" name="answer" autocomplete="off" autofocus placeholder="one word">
+      <button type="submit">SUBMIT</button>
+    </form>
+  {% endif %}
+{% endblock %}

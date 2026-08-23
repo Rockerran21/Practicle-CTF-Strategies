@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block body %}
+  <h1 class="ok">// OPERATION NIGHTJAR: SOLVED</h1>
+  <div class="panel">
+    <p class="ok">All four intercepts decrypted. The plan is recovered and the
+    cell is compromised. Outstanding work, analyst.</p>
+    <p class="amber">CAPTURED FLAG:</p>
+    <span class="blob">{{ flag }}</span>
+  </div>
+  <div class="panel">
+    <p class="dim">Techniques you defeated:</p>
+    <ul class="dim">
+      <li>Base64 armor + ROT13 rotation</li>
+      <li>Vigenere polyalphabetic cipher</li>
+      <li>Single-byte XOR (brute forced)</li>
+      <li>SHA-256 key derivation + AES-256-CBC decryption</li>
+    </ul>
+  </div>
+  <div class="btnrow">
+    <a href="{{ url_for('reset') }}">RUN IT AGAIN &raquo;</a>
+  </div>
+{% endblock %}

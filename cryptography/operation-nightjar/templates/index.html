@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block body %}
+  <h1>OPERATION NIGHTJAR</h1>
+  <p class="dim">CLASSIFIED // ANALYST TERMINAL // TRAINING EXERCISE</p>
+
+  <div class="panel">
+    <p>Signals intelligence has intercepted three encrypted fragments from a
+    criminal cell. Each fragment is locked with a different technique. Recover
+    the evidence from all three, combine what you learn into a single key, and
+    decrypt their final plan before the operation goes live.</p>
+    <p class="amber">You may use any tool on the internet: CyberChef, dcode.fr,
+    openssl, Python, your own scripts. There are no rules except one: solve it.</p>
+  </div>
+
+  <h2>MISSION PROGRESS</h2>
+  <div class="progress">
+    {% for i in range(1, total + 1) %}
+      <div class="pip {{ 'done' if i in solved else '' }}"></div>
+    {% endfor %}
+  </div>
+  <p class="dim">{{ solved|length }} / {{ total }} intercepts decrypted.</p>
+
+  <div class="btnrow">
+    <a href="{{ url_for('brief') }}">READ THE BRIEFING &raquo;</a>
+    <a href="{{ url_for('stage', stage=1) }}">GO TO INTERCEPT 001 &raquo;</a>
+  </div>
+
+  <p class="dim" style="margin-top:26px">
+    Good analysts read everything. Even the parts machines are told to ignore.
+  </p>
+{% endblock %}

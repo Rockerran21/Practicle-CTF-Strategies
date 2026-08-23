@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block body %}
+  <h1 class="red">// ACCESS LOCKED</h1>
+  <div class="panel">
+    <p class="red">Intercept {{ '%03d'|format(stage) }} is encrypted with material
+    you have not recovered yet.</p>
+    <p>Solve the previous intercept first. Each stage hands you the key to the
+    next.</p>
+  </div>
+  <div class="btnrow">
+    <a href="{{ url_for('stage', stage=stage-1) }}">&laquo; BACK TO INTERCEPT {{ '%03d'|format(stage-1) }}</a>
+  </div>
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block body %}
+  <h1>MISSION BRIEFING</h1>
+
+  <div class="panel">
+    <p><span class="amber">FROM:</span> Station Chief<br>
+    <span class="amber">TO:</span> Analyst on duty<br>
+    <span class="amber">RE:</span> Cell "NIGHTJAR" // imminent operation</p>
+
+    <p>We have three intercepted transmissions. They are chained: cracking one
+    reveals what you need to crack the next. Work them in order.</p>
+
+    <ol>
+      <li><b>Intercept 001</b> gives you the courier's <b>codename</b>, and a
+      cipher key hidden inside.</li>
+      <li><b>Intercept 002</b> gives you the <b>drop location</b>.</li>
+      <li><b>Intercept 003</b> gives you the <b>countersign</b>.</li>
+      <li>Combine the three recovered words into a hash, and use it to
+      <b>decrypt the final plan</b>.</li>
+    </ol>
+
+    <p>Submit each recovered value on its stage page. A correct answer unlocks
+    the next intercept. All flags are of the form
+    <code>NIGHTJAR{...}</code>.</p>
+  </div>
+
+  <div class="btnrow">
+    <a href="{{ url_for('stage', stage=1) }}">BEGIN: INTERCEPT 001 &raquo;</a>
+  </div>
+{% endblock %}
