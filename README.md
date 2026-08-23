@@ -1,8 +1,60 @@
-# Practice CTF Strategies
+# Cybersecurity CTF Labs
 
-A classroom repository for hands-on cybersecurity practice challenges across multiple Capture the Flag domains. The goal is to help students build practical investigation habits: inspect artifacts carefully, document their reasoning, recover flags, and explain how they solved each challenge.
+Open-source, classroom-tested cybersecurity challenges for students, instructors,
+and independent learners. Each lab emphasizes investigation, evidence-based
+reasoning, and explaining the complete solution path rather than submitting a
+flag without understanding it.
 
-This repository is intended for learning, not competition pressure. Challenges may be used during class, labs, homework, workshops, or self-paced practice.
+## Play online
+
+No installation is required for the hosted editions.
+
+| Challenge | Difficulty | Live challenge | What you will practice |
+| --- | --- | --- | --- |
+| Operation GHOST ROUTE | Advanced | [Start the investigation](https://operation-ghost-route.onrender.com) | Cross-log correlation, incident scoping, DNS exfiltration, Base32, XOR, zlib |
+| Operation NIGHTJAR | Intermediate | [Start the cryptography mission](https://nightjar-ctf.onrender.com) | Base64, ROT13, Vigenère, single-byte XOR, SHA-256, AES-256-CBC |
+
+Render's free services sleep when inactive, so the first visit may take up to
+about 50 seconds to start.
+
+## Clone and run locally
+
+```bash
+git clone https://github.com/Rockerran21/cybersecurity-ctf-labs.git
+cd cybersecurity-ctf-labs
+```
+
+Run GHOST ROUTE:
+
+```bash
+cd network-analysis/operation-ghost-route
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+python app.py
+```
+
+Run NIGHTJAR:
+
+```bash
+cd cryptography/operation-nightjar
+./run.sh
+```
+
+Both applications open on `http://localhost:8000` by default.
+
+## Use these labs in a class
+
+- GHOST ROUTE: give students `brief.md`, `learning-materials.md`, and the
+  `evidence/` directory. Keep `organizer/` private during an active class.
+- NIGHTJAR: the public source contains the organizer answer set. Change the
+  constants in `app.py`, run the self-test, and deploy the customized edition
+  from a private repository before assigning it.
+- Require a short evidence-backed write-up alongside every recovered flag.
+
+These challenges may be used in classes, labs, homework, workshops, or
+self-paced study. All scenarios are synthetic and intended only for authorized
+education.
 
 ## Domains
 
