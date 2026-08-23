@@ -1,0 +1,7 @@
+timestamp,username,source_ip,result,factor,device,risk
+2026-08-17T03:33:40Z,mira.shrestha,10.42.7.23,success,password+mfa,WS-FIN-07,low
+2026-08-17T03:32:10Z,admin.ops,198.51.100.77,denied,password,unknown,high
+2026-08-17T03:38:51Z,mira.shrestha,10.42.7.23,success,session_refresh,WS-FIN-07,low
+2026-08-17T03:14:12Z,sanjay.gurung,10.42.8.31,success,password+mfa,WS-HR-02,low
+2026-08-17T03:31:08Z,admin.ops,198.51.100.77,denied,password,unknown,high
+2026-08-17T03:28:03Z,backup.service,10.42.1.15,success,certificate,SRV-BACKUP-01,low

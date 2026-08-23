@@ -138,10 +138,15 @@ Any rules, warnings, or special instructions.
 | --- | --- | --- | --- |
 | Forensics | Silent Gallery | Intermediate | File carving, spectrogram analysis, whitespace steganography, basic reverse engineering |
 | Cryptography | [Operation NIGHTJAR](cryptography/operation-nightjar/) | Intermediate | Base64, ROT13, Vigenere cipher, single-byte XOR, SHA-256, AES-256-CBC |
+| Network Analysis | [Operation GHOST ROUTE](network-analysis/operation-ghost-route/) | Advanced | Multi-log correlation, intrusion scoping, DNS exfiltration, Base32, XOR, zlib |
 
 Operation NIGHTJAR is a self-hosted Flask challenge intended for instructors and
 workshop organizers. Its public source includes the organizer solution, so hosts
 should customize the answer set before assigning it to students.
+
+Operation GHOST ROUTE is an advanced blue-team investigation built from four
+synthetic evidence sources. A student release can be prepared by distributing
+only its `brief.md`, `learning-materials.md`, and `evidence/` directory.
 
 ## Flag Validation
 

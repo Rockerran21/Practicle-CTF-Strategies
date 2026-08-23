@@ -1,0 +1,6 @@
+timestamp,source_ip,username,method,url,status,bytes,sha256,user_agent
+2026-08-17T03:29:09Z,10.42.9.44,nabin.thapa,GET,https://news.invalid/business,200,96211,-,Mozilla/5.0
+2026-08-17T03:35:22Z,10.42.7.23,mira.shrestha,GET,https://updates-check.invalid/assets/quarterly_update.zip,200,184221,9f4d77a5e12ca9f74107a35df487a21719ae767252ad686f575417501a51bba7,Mozilla/5.0
+2026-08-17T03:39:02Z,10.42.7.23,mira.shrestha,POST,https://office-suite.invalid/telemetry,204,812,-,OfficeClient/16
+2026-08-17T03:16:45Z,10.42.8.31,sanjay.gurung,GET,https://hr-portal.invalid/attendance,200,48120,-,Mozilla/5.0
+2026-08-17T03:35:58Z,10.42.7.23,mira.shrestha,GET,https://updates-check.invalid/favicon.ico,404,233,-,Mozilla/5.0
