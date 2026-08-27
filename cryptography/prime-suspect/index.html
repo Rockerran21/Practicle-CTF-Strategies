@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Prime Suspect, a beginner to intermediate RSA cryptography CTF challenge.">
+    <title>Prime Suspect | Cryptography CTF</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Prime Suspect home">
+        <span class="brand-mark" aria-hidden="true">PS</span>
+        <span>PRIME SUSPECT</span>
+      </a>
+      <div class="status"><span aria-hidden="true"></span> CHALLENGE ONLINE</div>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="eyebrow">CRYPTOGRAPHY // 250 POINTS</div>
+        <h1>Two public keys.<br><em>One fatal mistake.</em></h1>
+        <p class="lede">
+          Two RSA gateways generated fresh keys during the same boot sequence.
+          Recover the diagnostic message encrypted for Gateway Alpha.
+        </p>
+        <div class="hero-actions">
+          <a class="button primary" href="capture.txt" download>Download evidence</a>
+          <a class="button secondary" href="#briefing">Read briefing</a>
+        </div>
+        <dl class="metadata" aria-label="Challenge metadata">
+          <div><dt>Category</dt><dd>Cryptography</dd></div>
+          <div><dt>Difficulty</dt><dd>Beginner / Intermediate</dd></div>
+          <div><dt>Tools</dt><dd>Python 3</dd></div>
+          <div><dt>Brute force</dt><dd>Not required</dd></div>
+        </dl>
+      </section>
+
+      <section class="briefing" id="briefing">
+        <div class="section-label">01 // INCIDENT BRIEFING</div>
+        <div class="briefing-grid">
+          <div>
+            <h2>A routine deployment left a cryptographic fingerprint.</h2>
+          </div>
+          <div class="brief-copy">
+            <p>
+              Forbes College's lab deployed two small RSA gateways for a
+              classroom exercise. Both generated keys immediately after the
+              same virtual machine image booted.
+            </p>
+            <p>
+              A monitoring sensor captured one encrypted diagnostic message
+              and both public keys. The administrator insists that public keys
+              cannot reveal the message. The key-generation process says
+              otherwise.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="evidence" aria-labelledby="evidence-title">
+        <div class="section-label">02 // CAPTURED EVIDENCE</div>
+        <div class="terminal">
+          <div class="terminal-bar">
+            <div class="terminal-title" id="evidence-title">capture.txt</div>
+            <button class="copy-button" id="copy-evidence" type="button">Copy evidence</button>
+          </div>
+          <pre id="evidence-text"><code>FORENSIC CAPTURE 2026-08-27
+Encoding: decimal integers
+
+[Gateway Alpha public key]
+n = 4719240734137752571591107621611448684084015964868839572099754890571811098443657239268441607286370727516310506153350660754774421889694056512363442922966943
+e = 65537
+
+[Ciphertext sent to Gateway Alpha]
+c = 536758243261327466415171425252180545631764551090575517217290930351735228206287334388054166994929405821920995579542199702460298630308842810493860823014988
+
+[Gateway Beta public key]
+n = 6733939148202853112317840827618263563657918140987066713361709295546218101227813601419299449153551994915065725613488962615283733188180266957950639001374897
+e = 65537
+
+Analyst note: both gateways generated their keys during the same boot sequence.</code></pre>
+        </div>
+      </section>
+
+      <section class="objective">
+        <div class="section-label">03 // OBJECTIVE</div>
+        <div class="objective-card">
+          <div>
+            <h2>Recover and submit the flag.</h2>
+            <p>
+              All captured numbers are decimal integers. The answer uses the
+              format <code>forbes{...}</code>. Python's standard library is
+              sufficient.
+            </p>
+          </div>
+          <form id="flag-form" novalidate>
+            <label for="flag">Recovered flag</label>
+            <div class="flag-entry">
+              <input id="flag" name="flag" type="text" autocomplete="off" spellcheck="false" placeholder="forbes{...}" required>
+              <button class="button primary" type="submit">Submit</button>
+            </div>
+            <p id="flag-result" class="flag-result" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <span>PRIME SUSPECT // RSA KEY FAILURE</span>
+      <span>Educational challenge</span>
+    </footer>
+  </body>
+</html>

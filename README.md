@@ -13,6 +13,7 @@ No installation is required for the hosted editions.
 | --- | --- | --- | --- |
 | Operation GHOST ROUTE | Advanced | [Start the investigation](https://operation-ghost-route.onrender.com) | Cross-log correlation, incident scoping, DNS exfiltration, Base32, XOR, zlib |
 | Operation NIGHTJAR | Intermediate | [Start the cryptography mission](https://nightjar-ctf.onrender.com) | Base64, ROT13, Vigenère, single-byte XOR, SHA-256, AES-256-CBC |
+| Prime Suspect | Beginner / Intermediate | [Investigate the RSA keys](https://prime-suspect-crypto-ctf.onrender.com/) | RSA structure, unsafe key generation, modular arithmetic, integer-to-byte conversion |
 
 Render's free services sleep when inactive, so the first visit may take up to
 about 50 seconds to start.
@@ -41,7 +42,15 @@ cd cryptography/operation-nightjar
 ./run.sh
 ```
 
-Both applications open on `http://localhost:8000` by default.
+Run Prime Suspect:
+
+```bash
+cd cryptography/prime-suspect
+python3 -m http.server 8000
+```
+
+Each challenge opens on `http://localhost:8000` by default. Run one challenge
+at a time when using the default port.
 
 ## Use these labs in a class
 
@@ -50,6 +59,9 @@ Both applications open on `http://localhost:8000` by default.
 - NIGHTJAR: the public source contains the organizer answer set. Change the
   constants in `app.py`, run the self-test, and deploy the customized edition
   from a private repository before assigning it.
+- Prime Suspect: give students the hosted URL or the contents of
+  `cryptography/prime-suspect/`. Keep the separate instructor solution private
+  during an active class.
 - Require a short evidence-backed write-up alongside every recovered flag.
 
 These challenges may be used in classes, labs, homework, workshops, or
@@ -85,6 +97,8 @@ Practice-CTF-Strategies/
 ├── network-analysis/
 ├── reverse-engineering/
 ├── cryptography/
+│   ├── operation-nightjar/
+│   └── prime-suspect/
 ├── osint/
 ├── misc/
 └── templates/
@@ -190,11 +204,17 @@ Any rules, warnings, or special instructions.
 | --- | --- | --- | --- |
 | Forensics | Silent Gallery | Intermediate | File carving, spectrogram analysis, whitespace steganography, basic reverse engineering |
 | Cryptography | [Operation NIGHTJAR](cryptography/operation-nightjar/) | Intermediate | Base64, ROT13, Vigenere cipher, single-byte XOR, SHA-256, AES-256-CBC |
+| Cryptography | [Prime Suspect](cryptography/prime-suspect/) | Beginner / Intermediate | RSA structure, flawed key generation, modular arithmetic, integer-to-byte conversion |
 | Network Analysis | [Operation GHOST ROUTE](network-analysis/operation-ghost-route/) | Advanced | Multi-log correlation, intrusion scoping, DNS exfiltration, Base32, XOR, zlib |
 
 Operation NIGHTJAR is a self-hosted Flask challenge intended for instructors and
 workshop organizers. Its public source includes the organizer solution, so hosts
 should customize the answer set before assigning it to students.
+
+Prime Suspect is a static RSA investigation. Students compare two public keys,
+recover an encrypted diagnostic message, and explain how the key-generation
+failure compromised the system. The public folder excludes the official
+solution, generator, and raw flag.
 
 Operation GHOST ROUTE is an advanced blue-team investigation built from four
 synthetic evidence sources. A student release can be prepared by distributing
